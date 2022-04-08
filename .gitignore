@@ -1,2 +1,4 @@
-secrets.py
+/.idea/
+/secrets.py
 *.pyc
+/.venv/

@@ -1,29 +1,22 @@
-BackupPC_archiveHost_s3
+BackupPC archive host B2
 =======================
+> Fork from [rtucker/backuppc-archive-s3](https://github.com/rtucker/backuppc-archive-s3)
 
 This is a Python script that acts as an interface between
 [BackupPC](http://backuppc.sourceforge.net/) and
-[Amazon S3](http://aws.amazon.com/s3/).  It uses BackupPC's
+[Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html).  It uses BackupPC's
 [archive function](http://backuppc.sourceforge.net/faq/BackupPC.html#archive_functions)
 to extract a tarball and split it into chunks, like the normal archive
 function.  Then, the chunks are encrypted using gpg and transmitted to
-S3 using [Boto](https://github.com/boto/boto).
+B2 using [B2 Python SDK](https://github.com/Backblaze/b2-sdk-python).
 
 Installation
 ------------
 
-I wrote this script some years ago, and can't remember how to get it going.
-But, here's going to be my best guess :-)
-
 ### Install the prerequisites
 
-> You will need Python, [Boto](https://github.com/boto/boto), and a
+> You will need Python3.9, pip requirements, and a
 > working BackupPC installation.
-
-> Note: Python 2.6+ and Boto 2.0+ are required for recent changes, which
-> include multiprocessing support.  I may make these optional later on,
-> but until then, tag stable-20110610 is what was running before I decided
-> to mess with things!
 
 ### Download and install this script
 
