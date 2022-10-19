@@ -212,7 +212,7 @@ def open_b2(access_key: str, shared_key: str, host: str) -> Bucket:
     :return: The host B2 bucket
     """
     b2_api.authorize_account("production", access_key, shared_key)
-    my_bucket_name = f"{access_key}-bckpc-{host.replace('.', '-')}".lower()
+    my_bucket_name = f"{b2_api.account_info._account_id}-bckpc-{host.replace('.', '-')}".lower()[:50]
     lifecycle_rules = [{
         'daysFromHidingToDeleting': 1,
         'daysFromUploadingToHiding': None,

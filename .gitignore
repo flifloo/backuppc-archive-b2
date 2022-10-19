@@ -2,3 +2,5 @@
 /secrets.py
 *.pyc
 /.venv/
+/venv/
+/test.py

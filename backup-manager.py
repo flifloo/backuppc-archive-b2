@@ -51,7 +51,7 @@ class BackupManager:
         self._backups = None
 
     def _generate_backup_buckets(self) -> [Bucket]:
-        bucket_prefix = f"{self._access_key}-bckpc-".lower()
+        bucket_prefix = f"{self._connection.account_info._account_id}-bckpc-".lower()
         buckets = self._connection.list_buckets()
         self._buckets = []
 
